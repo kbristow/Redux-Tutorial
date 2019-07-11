@@ -1,5 +1,5 @@
 # Redux React Tutorial
-Followed the tutorial here: https://youtu.be/93p3LxR9xfM. Tried to implement the tutorial using Typescript.
+Followed the tutorial here: https://youtu.be/93p3LxR9xfM. Tried to implement the tutorial using TypeScript.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
