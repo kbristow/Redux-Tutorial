@@ -3,7 +3,17 @@ import './App.css';
 import Posts from "./components/Posts";
 import PostForm from "./components/PostForm";
 import {Provider} from "react-redux";
-import store from "./Store";
+import configureStore from "./configureStore";
+import {ApplicationState} from "./store";
+
+const initialState: ApplicationState = {
+    posts: {
+        items: []
+    }
+};
+
+
+const store = configureStore(initialState);
 
 const App: React.FC = () => {
     return (

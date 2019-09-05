@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {createPost} from "../actions/PostActions";
 import {Post} from "./Posts";
+import {createPost} from "../store/posts/Thunks";
 
 class PostForm extends Component<PostFormProps> {
 
@@ -60,4 +60,8 @@ export interface PostFormState {
     body: string,
 }
 
-export default connect(null, {createPost})(PostForm);
+const mapDispatchToProps = {
+    createPost,
+};
+
+export default connect(null, mapDispatchToProps)(PostForm);

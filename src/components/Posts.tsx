@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-import {fetchPosts} from "../actions/PostActions";
-import {RootState} from "../actions/RootTypes";
+import {fetchPosts} from "../store/posts/Thunks";
+import {ApplicationState} from "../store";
 
 class Posts extends Component<PostsProps> {
 
@@ -43,9 +43,13 @@ export interface Post {
     body: string,
 }
 
-const mapStateToProps = (state: RootState) => ({
+const mapStateToProps = (state: ApplicationState) => ({
     posts: state.posts.items,
     newPost: state.posts.item,
 });
 
-export default connect(mapStateToProps, {fetchPosts})(Posts);
+const mapDispatchToProps = {
+    fetchPosts,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Posts);

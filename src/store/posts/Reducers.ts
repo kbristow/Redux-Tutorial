@@ -1,6 +1,6 @@
 import {createReducer, getType} from "typesafe-actions";
-import {createPostAction, fetchPostsAction} from "../actions/PostActions";
-import {CreatePostAction, FetchPostsAction, PostState} from "../actions/PostTypes";
+import {CreatePostAction, createPostAction, FetchPostsAction, fetchPostsAction} from "./Actions";
+import {PostState} from "./Types";
 
 const initialState: PostState = {
     items: [],
